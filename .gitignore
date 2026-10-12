@@ -1,0 +1,21 @@
+# Visual Studio
+
+.vs/
+
+# Build output
+
+bin/
+obj/
+Debug/
+Release/
+
+# NuGet packages
+
+packages/
+
+# Temporary files
+
+*.user
+*.suo
+*.tmp
+*.log
