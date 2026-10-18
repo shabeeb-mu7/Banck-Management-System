@@ -21,7 +21,7 @@ namespace BanckSystemDesktop
         public int Permissions {  get; set; }
 
         bool _MarkedForDelete = false;
-
+        public static int UserCount = _LoadUsersDataFromFile().Count - 1;
         static clsUser _ConvertLineToUserObject(string line,string seprator="#//#")
         {
             string[] aUsersData = line.Split(new string[] {seprator},StringSplitOptions.None);

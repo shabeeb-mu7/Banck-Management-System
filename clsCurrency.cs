@@ -8,6 +8,8 @@ namespace BanckSystemDesktop
 {
     internal class clsCurrency
     {
+        static string path = Global.GetDataFilePath("Currencies.txt");
+
         internal enum enMode { UpdateMode = 1, EmptyMode = 0 }
         enMode _Mode;
         public string Country { get; set; }
@@ -32,9 +34,9 @@ namespace BanckSystemDesktop
         private static List<clsCurrency> _LoadCurrnciesFromFile()
         {
             List<clsCurrency> lCurrencies = new List<clsCurrency>();
-            if (File.Exists("Currencies.txt"))
+            if (File.Exists(path))
             {
-                using (StreamReader MyFile = new StreamReader("Currencies.txt"))
+                using (StreamReader MyFile = new StreamReader(path))
                 {
                     string Line;
                     while ((Line = MyFile.ReadLine()) != null)
@@ -51,7 +53,7 @@ namespace BanckSystemDesktop
         }
         private static void _SaveCurrnciesToFile(List<clsCurrency> lCurrency)
         {
-            using (StreamWriter MyFile = new StreamWriter("Currencies.txt"))
+            using (StreamWriter MyFile = new StreamWriter(path))
             {
                 foreach (clsCurrency c in lCurrency)
                 {

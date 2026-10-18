@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BanckSystemDesktop;
-
 namespace SystemBanckDeskTop2
 {
     internal static class Program
@@ -17,7 +16,7 @@ namespace SystemBanckDeskTop2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmLogin1());
         }
     }
 }

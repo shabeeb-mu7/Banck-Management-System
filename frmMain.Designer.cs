@@ -31,16 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2ElipseUpper = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gpnlUpper = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ElipseWrite = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.panelContainer = new System.Windows.Forms.Panel();
-            this.panelcontent = new System.Windows.Forms.Panel();
             this.gpnlright = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbtnClients = new Guna.UI2.WinForms.Guna2Button();
@@ -51,29 +47,27 @@
             this.gbtnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ppBnckIcon = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2Elipseforgbtns = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.panelcontent = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.gpnlUpper.SuspendLayout();
-            this.panelContainer.SuspendLayout();
             this.gpnlright.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ppBnckIcon)).BeginInit();
+            this.panelContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
             // 
+            this.guna2BorderlessForm1.BorderRadius = 5;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2ElipseUpper
-            // 
-            this.guna2ElipseUpper.BorderRadius = 15;
-            this.guna2ElipseUpper.TargetControl = this.gpnlUpper;
-            // 
             // gpnlUpper
             // 
-            this.gpnlUpper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.gpnlUpper.BackColor = System.Drawing.Color.Transparent;
+            this.gpnlUpper.BorderRadius = 5;
             this.gpnlUpper.Controls.Add(this.guna2ControlBox2);
             this.gpnlUpper.Controls.Add(this.label7);
             this.gpnlUpper.Controls.Add(this.label6);
@@ -145,31 +139,6 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 0;
             // 
-            // guna2ElipseWrite
-            // 
-            this.guna2ElipseWrite.BorderRadius = 15;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.Controls.Add(this.panelcontent);
-            this.panelContainer.Controls.Add(this.gpnlright);
-            this.panelContainer.Controls.Add(this.gpnlUpper);
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Padding = new System.Windows.Forms.Padding(10);
-            this.panelContainer.Size = new System.Drawing.Size(1280, 800);
-            this.panelContainer.TabIndex = 7;
-            // 
-            // panelcontent
-            // 
-            this.panelcontent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelcontent.Location = new System.Drawing.Point(350, 136);
-            this.panelcontent.Name = "panelcontent";
-            this.panelcontent.Padding = new System.Windows.Forms.Padding(10);
-            this.panelcontent.Size = new System.Drawing.Size(920, 654);
-            this.panelcontent.TabIndex = 9;
-            // 
             // gpnlright
             // 
             this.gpnlright.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
@@ -179,7 +148,7 @@
             this.gpnlright.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.gpnlright.Location = new System.Drawing.Point(10, 136);
             this.gpnlright.Name = "gpnlright";
-            this.gpnlright.Size = new System.Drawing.Size(340, 654);
+            this.gpnlright.Size = new System.Drawing.Size(340, 664);
             this.gpnlright.TabIndex = 7;
             // 
             // tableLayoutPanel1
@@ -205,15 +174,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28612F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28612F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28612F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(340, 530);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(340, 540);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // gbtnClients
             // 
-            this.gbtnClients.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
+            this.gbtnClients.BorderColor = System.Drawing.Color.White;
             this.gbtnClients.BorderRadius = 15;
             this.gbtnClients.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.gbtnClients.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.gbtnClients.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gbtnClients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.gbtnClients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.gbtnClients.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -221,11 +191,11 @@
             this.gbtnClients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbtnClients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.gbtnClients.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbtnClients.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbtnClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
             this.gbtnClients.ImageOffset = new System.Drawing.Point(-30, 0);
-            this.gbtnClients.Location = new System.Drawing.Point(8, 82);
+            this.gbtnClients.Location = new System.Drawing.Point(8, 83);
             this.gbtnClients.Name = "gbtnClients";
-            this.gbtnClients.Size = new System.Drawing.Size(324, 68);
+            this.gbtnClients.Size = new System.Drawing.Size(324, 69);
             this.gbtnClients.TabIndex = 6;
             this.gbtnClients.Text = "Clients";
             this.gbtnClients.TextOffset = new System.Drawing.Point(-18, 0);
@@ -235,10 +205,11 @@
             // 
             // gbtnLogOut
             // 
-            this.gbtnLogOut.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
+            this.gbtnLogOut.BorderColor = System.Drawing.Color.White;
             this.gbtnLogOut.BorderRadius = 15;
             this.gbtnLogOut.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.gbtnLogOut.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.gbtnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gbtnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.gbtnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.gbtnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -246,23 +217,25 @@
             this.gbtnLogOut.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbtnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.gbtnLogOut.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbtnLogOut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbtnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
             this.gbtnLogOut.ImageOffset = new System.Drawing.Point(-25, 0);
-            this.gbtnLogOut.Location = new System.Drawing.Point(8, 452);
+            this.gbtnLogOut.Location = new System.Drawing.Point(8, 458);
             this.gbtnLogOut.Name = "gbtnLogOut";
-            this.gbtnLogOut.Size = new System.Drawing.Size(324, 70);
+            this.gbtnLogOut.Size = new System.Drawing.Size(324, 74);
             this.gbtnLogOut.TabIndex = 10;
             this.gbtnLogOut.Text = "Logout";
             this.gbtnLogOut.TextOffset = new System.Drawing.Point(-15, 0);
+            this.gbtnLogOut.Click += new System.EventHandler(this.gbtnLogOut_Click);
             this.gbtnLogOut.MouseEnter += new System.EventHandler(this.change_gbtnbackcolormouseEnter);
             this.gbtnLogOut.MouseLeave += new System.EventHandler(this.change_gbtnbackcolormouseLeave);
             // 
             // gbtnTransaction
             // 
-            this.gbtnTransaction.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
+            this.gbtnTransaction.BorderColor = System.Drawing.Color.White;
             this.gbtnTransaction.BorderRadius = 15;
             this.gbtnTransaction.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.gbtnTransaction.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.gbtnTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gbtnTransaction.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.gbtnTransaction.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.gbtnTransaction.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -270,23 +243,25 @@
             this.gbtnTransaction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbtnTransaction.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.gbtnTransaction.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbtnTransaction.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbtnTransaction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
             this.gbtnTransaction.ImageOffset = new System.Drawing.Point(-20, 0);
-            this.gbtnTransaction.Location = new System.Drawing.Point(8, 156);
+            this.gbtnTransaction.Location = new System.Drawing.Point(8, 158);
             this.gbtnTransaction.Name = "gbtnTransaction";
-            this.gbtnTransaction.Size = new System.Drawing.Size(324, 68);
+            this.gbtnTransaction.Size = new System.Drawing.Size(324, 69);
             this.gbtnTransaction.TabIndex = 7;
             this.gbtnTransaction.Text = "Trasactions";
             this.gbtnTransaction.TextOffset = new System.Drawing.Point(-9, 0);
+            this.gbtnTransaction.Click += new System.EventHandler(this.gbtnTransaction_Click);
             this.gbtnTransaction.MouseEnter += new System.EventHandler(this.change_gbtnbackcolormouseEnter);
             this.gbtnTransaction.MouseLeave += new System.EventHandler(this.change_gbtnbackcolormouseLeave);
             // 
             // gbtnReorts
             // 
-            this.gbtnReorts.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
+            this.gbtnReorts.BorderColor = System.Drawing.Color.White;
             this.gbtnReorts.BorderRadius = 15;
             this.gbtnReorts.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.gbtnReorts.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.gbtnReorts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gbtnReorts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.gbtnReorts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.gbtnReorts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -294,23 +269,25 @@
             this.gbtnReorts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbtnReorts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.gbtnReorts.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbtnReorts.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbtnReorts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
             this.gbtnReorts.ImageOffset = new System.Drawing.Point(-27, 0);
-            this.gbtnReorts.Location = new System.Drawing.Point(8, 304);
+            this.gbtnReorts.Location = new System.Drawing.Point(8, 308);
             this.gbtnReorts.Name = "gbtnReorts";
-            this.gbtnReorts.Size = new System.Drawing.Size(324, 68);
+            this.gbtnReorts.Size = new System.Drawing.Size(324, 69);
             this.gbtnReorts.TabIndex = 9;
             this.gbtnReorts.Text = "Reports";
             this.gbtnReorts.TextOffset = new System.Drawing.Point(-14, 0);
+            this.gbtnReorts.Click += new System.EventHandler(this.gbtnReorts_Click);
             this.gbtnReorts.MouseEnter += new System.EventHandler(this.change_gbtnbackcolormouseEnter);
             this.gbtnReorts.MouseLeave += new System.EventHandler(this.change_gbtnbackcolormouseLeave);
             // 
             // gbtnUser
             // 
-            this.gbtnUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
+            this.gbtnUser.BorderColor = System.Drawing.Color.White;
             this.gbtnUser.BorderRadius = 15;
             this.gbtnUser.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.gbtnUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.gbtnUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gbtnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.gbtnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.gbtnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -318,23 +295,25 @@
             this.gbtnUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbtnUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.gbtnUser.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbtnUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbtnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
             this.gbtnUser.ImageOffset = new System.Drawing.Point(-33, 0);
-            this.gbtnUser.Location = new System.Drawing.Point(8, 230);
+            this.gbtnUser.Location = new System.Drawing.Point(8, 233);
             this.gbtnUser.Name = "gbtnUser";
-            this.gbtnUser.Size = new System.Drawing.Size(324, 68);
+            this.gbtnUser.Size = new System.Drawing.Size(324, 69);
             this.gbtnUser.TabIndex = 8;
             this.gbtnUser.Text = "Users";
             this.gbtnUser.TextOffset = new System.Drawing.Point(-20, 0);
+            this.gbtnUser.Click += new System.EventHandler(this.gbtnUser_Click);
             this.gbtnUser.MouseEnter += new System.EventHandler(this.change_gbtnbackcolormouseEnter);
             this.gbtnUser.MouseLeave += new System.EventHandler(this.change_gbtnbackcolormouseLeave);
             // 
             // gbtnHome
             // 
-            this.gbtnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
-            this.gbtnHome.BorderRadius = 15;
+            this.gbtnHome.BorderColor = System.Drawing.Color.White;
+            this.gbtnHome.BorderRadius = 10;
             this.gbtnHome.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.gbtnHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.gbtnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gbtnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.gbtnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.gbtnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -342,12 +321,12 @@
             this.gbtnHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbtnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.gbtnHome.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbtnHome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbtnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(84)))));
             this.gbtnHome.Image = ((System.Drawing.Image)(resources.GetObject("gbtnHome.Image")));
             this.gbtnHome.ImageOffset = new System.Drawing.Point(-32, 0);
             this.gbtnHome.Location = new System.Drawing.Point(8, 8);
             this.gbtnHome.Name = "gbtnHome";
-            this.gbtnHome.Size = new System.Drawing.Size(324, 68);
+            this.gbtnHome.Size = new System.Drawing.Size(324, 69);
             this.gbtnHome.TabIndex = 2;
             this.gbtnHome.Text = "Home";
             this.gbtnHome.TextOffset = new System.Drawing.Point(-20, 0);
@@ -377,9 +356,27 @@
             this.ppBnckIcon.TabIndex = 9;
             this.ppBnckIcon.TabStop = false;
             // 
-            // guna2Elipseforgbtns
+            // panelcontent
             // 
-            this.guna2Elipseforgbtns.BorderRadius = 15;
+            this.panelcontent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelcontent.Location = new System.Drawing.Point(350, 136);
+            this.panelcontent.Name = "panelcontent";
+            this.panelcontent.Padding = new System.Windows.Forms.Padding(10);
+            this.panelcontent.Size = new System.Drawing.Size(920, 664);
+            this.panelcontent.TabIndex = 9;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.BackColor = System.Drawing.Color.Transparent;
+            this.panelContainer.Controls.Add(this.panelcontent);
+            this.panelContainer.Controls.Add(this.gpnlright);
+            this.panelContainer.Controls.Add(this.gpnlUpper);
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.panelContainer.Size = new System.Drawing.Size(1280, 800);
+            this.panelContainer.TabIndex = 7;
             // 
             // frmMain
             // 
@@ -389,6 +386,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 800);
             this.Controls.Add(this.panelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1000, 650);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -396,37 +394,34 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.gpnlUpper.ResumeLayout(false);
             this.gpnlUpper.PerformLayout();
-            this.panelContainer.ResumeLayout(false);
             this.gpnlright.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ppBnckIcon)).EndInit();
+            this.panelContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2ElipseUpper;
-        private Guna.UI2.WinForms.Guna2Elipse guna2ElipseWrite;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Panel panelcontent;
         private Guna.UI2.WinForms.Guna2Panel gpnlright;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2Button gbtnClients;
+        private Guna.UI2.WinForms.Guna2Button gbtnLogOut;
+        private Guna.UI2.WinForms.Guna2Button gbtnTransaction;
+        private Guna.UI2.WinForms.Guna2Button gbtnReorts;
+        private Guna.UI2.WinForms.Guna2Button gbtnUser;
+        private Guna.UI2.WinForms.Guna2Button gbtnHome;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox ppBnckIcon;
         private Guna.UI2.WinForms.Guna2Panel gpnlUpper;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private System.Windows.Forms.Panel panelcontent;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox ppBnckIcon;
-        private Guna.UI2.WinForms.Guna2Button gbtnHome;
-        private Guna.UI2.WinForms.Guna2Button gbtnClients;
-        private Guna.UI2.WinForms.Guna2Button gbtnTransaction;
-        private Guna.UI2.WinForms.Guna2Button gbtnLogOut;
-        private Guna.UI2.WinForms.Guna2Button gbtnUser;
-        private Guna.UI2.WinForms.Guna2Button gbtnReorts;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipseforgbtns;
     }
 }

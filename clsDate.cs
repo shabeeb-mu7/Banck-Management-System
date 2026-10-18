@@ -8,10 +8,18 @@ namespace BanckSystemDesktop
 {
     internal class clsDate
     {
+        static  DateTime now = DateTime.Now;
         public static string GetSystemdateTimeString()
         {
-            DateTime now = DateTime.Now;
             return now.ToString("d/M/yyyy - HH:mm:ss");
+        }
+        public static string Date()
+        {
+            return now.ToString("dd/MM/yyyy");
+        }
+        public static string Time()
+        {
+            return DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }

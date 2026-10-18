@@ -10,7 +10,8 @@ namespace BanckSystemDesktop
     internal class clsBanckClient:clsPerson
     {
         //private
-
+        static string path = Global.GetDataFilePath("Clients.txt");
+        static string pathTransfer = Global.GetDataFilePath("TransferLog.txt");
         internal enum enMode { UpdateMode=0, AddNewMode,EmptyMode}
 
         enMode _Mode;
@@ -18,7 +19,8 @@ namespace BanckSystemDesktop
         public string PinCode {  get; set; }
         public float AccountBalance {  get; set; }
         bool _MarkedForDelete = false;
-
+        public static int ClientCount = _LoadBanckClientDataFromFile().Count - 1;
+        public static int TransferCount=GetTransferOperationsLogsList().Count - 1;
         static clsBanckClient _ConvertLineToBanckClientObject(string Line,string seperator="#//#")
         {
             string[] aBanckClientData = Line.Split(new string[] { seperator }, StringSplitOptions.None);
@@ -40,9 +42,9 @@ namespace BanckSystemDesktop
         static List<clsBanckClient> _LoadBanckClientDataFromFile()
         {
             List<clsBanckClient> lClients= new List<clsBanckClient>();
-            if (File.Exists("Clients.txt"))
+            if (File.Exists(path))
             {
-                using(StreamReader MyFile=new StreamReader("Clients.txt"))
+                using(StreamReader MyFile=new StreamReader(path))
                 {
                     string Line;
                     while ((Line = MyFile.ReadLine()) != null)
@@ -55,7 +57,7 @@ namespace BanckSystemDesktop
         }
         static void _SaveClienstDataToFile(List<clsBanckClient> lClients)
         {
-            using(StreamWriter MyFile=new StreamWriter("Clients.txt"))
+            using(StreamWriter MyFile=new StreamWriter(path))
             {
                 foreach(clsBanckClient Client in lClients)
                 {
@@ -85,7 +87,7 @@ namespace BanckSystemDesktop
         }
         void _AddDataLineToFile(string Line)
         {
-            using(StreamWriter MyFile=new StreamWriter(Line, true))
+            using(StreamWriter MyFile=new StreamWriter(path, true))
             {
                 MyFile.WriteLine(Line);
             }
@@ -110,7 +112,7 @@ namespace BanckSystemDesktop
         void _RegisterTransferLog(float AmountTransfer,clsBanckClient DestenationClient)
         {
             string RegisterLine=_PrepareTransferLogRecord(AmountTransfer,DestenationClient);
-            using(StreamWriter MyFile= new StreamWriter("TransferLog.txt", true))
+            using(StreamWriter MyFile= new StreamWriter(pathTransfer, true))
             {
                 MyFile.WriteLine(RegisterLine);
             }
@@ -132,9 +134,10 @@ namespace BanckSystemDesktop
 
         //public
 
-        public clsBanckClient(enMode mode,string firstname,string lastname,string email, string phone,string accountnumber
-            ,string pincode,float accountbalance):base(firstname, lastname, phone, email)
+        public clsBanckClient(enMode mode,string firstname,string lastname,string email , string phone, string accountnumber
+            ,string pincode,float accountbalance):base(firstname, lastname, email, phone)
         {
+            _Mode = mode;
             AccountNumber= accountnumber;
             PinCode= pincode;
             AccountBalance = accountbalance;
@@ -229,9 +232,9 @@ namespace BanckSystemDesktop
         {
             return _LoadBanckClientDataFromFile();
         }
-        public static clsBanckClient GetAddNewClientObject()
+        public static clsBanckClient GetAddNewClientObject(string accountNumber)
         {
-            return new clsBanckClient(enMode.AddNewMode, "", "", "", "", "", "", 0);
+            return new clsBanckClient(enMode.AddNewMode, "", "", "", "", accountNumber, "", 0);
         }
         public static float GetTotalBalnces()
         {
@@ -271,9 +274,9 @@ namespace BanckSystemDesktop
         public static List<stTransferOperationsLogs> GetTransferOperationsLogsList()
         {
             List<stTransferOperationsLogs>lstTransferOperationsLogs= new List<stTransferOperationsLogs>();
-            if (File.Exists("TransferLog.txt"))
+            if (File.Exists(pathTransfer))
             {
-                using(StreamReader MyFile=new StreamReader("TransferLog.txt"))
+                using(StreamReader MyFile=new StreamReader(pathTransfer))
                 {
                     string Line;
                     while ((Line = MyFile.ReadLine()) != null)

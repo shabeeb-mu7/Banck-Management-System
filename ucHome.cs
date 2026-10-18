@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BanckSystemDesktop;
+using Guna.UI2.WinForms;
 
 namespace SystemBanckDeskTop2
 {
@@ -15,8 +17,10 @@ namespace SystemBanckDeskTop2
         public ucHome()
         {
             InitializeComponent();
-            ppUserP.Image = Image.FromFile(@"D:\user.png");
-            gppCalender.Image = Image.FromFile(@"D:\calendar.png");
+            //ppUserP.Image = Image.FromFile(@"D:\" + Global.CurrentUser.UserName + ".png");
+            ppUserP.Image = Image.FromFile(@"C:\Users\STCH\Downloads\man.png");
+            
+            ppCalaender.Image = Image.FromFile(@"D:\calendar.png");
             ppTotalTransaction.Image = Image.FromFile(@"D:\transaction-history.png");
             ppTotalClients.Image = Image.FromFile(@"C:\Users\STCH\Downloads\audience.png");
             ppTotalBalances.Image = Image.FromFile(@"C:\Users\STCH\Downloads\money (1).png");
@@ -26,16 +30,18 @@ namespace SystemBanckDeskTop2
             ppTotalUsres.Image = Image.FromFile(@"C:\Users\STCH\Downloads\employee.png");
             gbtnRecentActivity.Image = Image.FromFile(@"C:\Users\STCH\Downloads\recently.png");
             gbtnCurrencyExchange.Image = Image.FromFile(@"C:\Users\STCH\Downloads\currency.png");
+            lbTotalClients.Text=clsBanckClient.ClientCount.ToString();
+            lbTotalBalances.Text=clsBanckClient.GetTotalBalnces().ToString()+ "$";
+            lbTotalTransfers.Text=clsBanckClient.TransferCount.ToString();
+            lbTotalUsers.Text=clsUser.UserCount.ToString();
         }
-
-        private void panelHome_Paint(object sender, PaintEventArgs e)
+        private void chgangebanelcolormouseHover(object sender, EventArgs e)
         {
-
+            ((Guna2Panel)sender).FillColor = Color.FromArgb(37, 99, 235);
         }
-
-        private void panelcontentcards_Paint(object sender, PaintEventArgs e)
+        private void chgangebanelcolormouseLeave(object sender, EventArgs e)
         {
-
+            ((Guna2Panel)sender).FillColor = Color.White;
         }
 
         private void gpnlMangeClients_Paint(object sender, PaintEventArgs e)
@@ -43,17 +49,45 @@ namespace SystemBanckDeskTop2
 
         }
 
-        private void lbtransactioncount_Click(object sender, EventArgs e)
+        private void gbtnRecentActivity_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        private void ucHome_Load(object sender, EventArgs e)
+        {
+            timerforTime.Start();
+            lbUserName.Text = Global.CurrentUser.UserName;
+            lbDate.Text = clsDate.Date();
+            lbTime.Text = clsDate.Time();
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void ppTotalClients_Click(object sender, EventArgs e)
+        private void gbtnRecentActivity_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerforTime_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = clsDate.Time();
+        }
+
+        private void gbtnRecentActivity_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gbtnRecentActivity_Click_3(object sender, EventArgs e)
         {
 
         }
